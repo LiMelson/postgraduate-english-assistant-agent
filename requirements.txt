@@ -1,0 +1,19 @@
+# 核心依赖
+langgraph
+flask
+requests
+beautifulsoup4
+openai
+
+# 数据处理
+pandas
+numpy
+
+# 文本处理
+jieba
+
+# 网络
+flask-cors
+
+# 工具
+python-dotenv
