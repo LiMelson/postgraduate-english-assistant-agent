@@ -17,3 +17,7 @@ flask-cors
 
 # 工具
 python-dotenv
+
+# 生产环境依赖
+gunicorn==21.2.0
+whitenoise==6.6.0

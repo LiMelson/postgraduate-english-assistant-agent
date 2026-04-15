@@ -13,5 +13,15 @@ export default defineConfig({
         timeout: 60000
       }
     }
+  },
+  // 生产环境配置
+  build: {
+    outDir: 'dist',
+    sourcemap: false,
+    rollupOptions: {
+      output: {
+        manualChunks: undefined
+      }
+    }
   }
 })

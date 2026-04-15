@@ -1,9 +1,20 @@
 from flask import Blueprint, request, jsonify, Response
 import time
+import os
 from app.graph.workflow import Workflow
 
 api_bp = Blueprint('api', __name__)
 workflow = Workflow()
+
+@api_bp.route('/health', methods=['GET'])
+def health_check():
+    """健康检查端点"""
+    return jsonify({
+        "status": "healthy",
+        "service": "考研英语辅助Agent",
+        "version": "1.0.0",
+        "timestamp": time.time()
+    })
 
 @api_bp.route('/ask', methods=['POST'])
 def ask_question():
